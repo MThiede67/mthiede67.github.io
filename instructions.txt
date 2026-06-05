@@ -1,0 +1,318 @@
+Matt, here’s the safest step-by-step path to keep the domain and email with Wix, while hosting the actual website on GitHub Pages.
+
+The main rule: only change the website DNS records. Do not touch the email records.
+
+Goal
+
+Keep:
+
+Domain registration → Wix
+Email inbox → Wix / Google Workspace / current email provider
+Website hosting → GitHub Pages
+
+So the end result is:
+
+hisdomain.com       → GitHub website
+www.hisdomain.com   → GitHub website
+info@hisdomain.com  → existing email still works
+
+Step 1 — Document the current Wix DNS records
+
+Before changing anything, log into Wix and take screenshots of the full DNS table.
+
+Go to:
+
+Wix Dashboard → Domains → select domain → Manage DNS Records
+
+Wix’s help docs confirm DNS records are managed from the Domains area under Manage DNS Records.
+
+Take screenshots of every section, especially:
+
+A records
+CNAME records
+MX records
+TXT records
+SRV records, if any
+
+This gives you a rollback point.
+
+Step 2 — Identify the email records and leave them alone
+
+Look for records like these:
+
+MX records
+TXT record with SPF
+TXT record with DKIM
+TXT record with DMARC
+Google verification TXT record
+Microsoft 365 verification TXT record
+mail-related CNAME records
+SRV records
+
+Do not delete or edit those.
+
+Wix specifically supports MX records and other DNS records like CNAME and TXT, which are commonly used for email routing and verification.
+
+If his email is Google Workspace, the MX records may look something like Google mail servers. If it is Microsoft 365, Microsoft has specific Wix DNS setup steps that include MX, TXT, CNAME, and SRV records.
+
+Step 3 — Create the GitHub repository
+
+In GitHub:
+
+GitHub → New Repository
+
+Name it something like:
+
+business-site
+
+Upload the website files:
+
+index.html
+style.css
+script.js
+images/
+
+For a basic static site, the most important file is:
+
+index.html
+
+Step 4 — Enable GitHub Pages
+
+Inside the repo:
+
+Settings → Pages
+
+Set:
+
+Source: Deploy from a branch
+Branch: main
+Folder: /root
+
+Save it.
+
+GitHub will create a default Pages URL, probably something like:
+
+username.github.io/business-site
+
+Make sure the site loads at that temporary GitHub URL before touching Wix DNS.
+
+Step 5 — Add the custom domain inside GitHub
+
+In the same GitHub repo:
+
+Settings → Pages → Custom domain
+
+Enter the domain.
+
+I recommend using the www version first:
+
+www.hisdomain.com
+
+Then save.
+
+GitHub’s official docs say custom domains are configured through the repo’s Pages settings plus DNS records at the DNS provider.
+
+GitHub may create a file in the repo called:
+
+CNAME
+
+That is normal.
+
+Step 6 — Get the GitHub DNS records
+
+For GitHub Pages, you usually need:
+
+For the root domain
+
+hisdomain.com
+
+Add GitHub’s A records for the apex/root domain.
+
+GitHub currently lists these IPv4 A records for GitHub Pages:
+
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+GitHub also supports AAAA records for IPv6, but the A records are usually enough to get started. GitHub’s docs explain that an apex domain uses A, ALIAS, or ANAME records through the DNS provider.
+
+For the www version
+
+www.hisdomain.com
+
+Create or update a CNAME:
+
+Host: www
+Value: username.github.io
+
+GitHub says the www subdomain should use a CNAME pointing to the GitHub Pages default domain, such as username.github.io.
+
+Step 7 — Update only the website records in Wix
+
+Back in Wix:
+
+Wix Dashboard → Domains → Manage DNS Records
+
+Wix says when connecting a Wix domain to an external site, the external host should provide the needed A record and CNAME record. Wix also notes this is done without changing name servers.
+
+Update the A records
+
+Find the A record for:
+
+Host: @
+
+or sometimes:
+
+Host: blank
+
+Replace the existing Wix website A records with GitHub’s A records:
+
+@ → 185.199.108.153
+@ → 185.199.109.153
+@ → 185.199.110.153
+@ → 185.199.111.153
+
+Update the CNAME for www
+
+Find:
+
+Host: www
+
+Set it to:
+
+username.github.io
+
+Example:
+
+www → mtatham2.github.io
+
+Do not point it to the repository URL. It should usually be the GitHub Pages root domain:
+
+username.github.io
+
+not:
+
+username.github.io/business-site
+
+Step 8 — Do not change these records
+
+Leave these exactly as they are:
+
+MX
+TXT SPF
+TXT DKIM
+TXT DMARC
+Google Workspace verification
+Microsoft 365 verification
+mail CNAME records
+SRV records
+
+This is what keeps his email working.
+
+Step 9 — Wait for DNS propagation
+
+DNS can update quickly, but it can also take several hours.
+
+Check these URLs:
+
+https://hisdomain.com
+https://www.hisdomain.com
+
+At first, one may work before the other. That is normal.
+
+Step 10 — Enable HTTPS in GitHub
+
+Once GitHub detects the domain correctly:
+
+GitHub repo → Settings → Pages
+
+Enable:
+
+Enforce HTTPS
+
+Sometimes this checkbox is unavailable until DNS fully propagates.
+
+Step 11 — Test the email
+
+Send a test email to his domain email address:
+
+info@hisdomain.com
+
+Then reply from that account to make sure both inbound and outbound email still work.
+
+Also test the website:
+
+hisdomain.com
+www.hisdomain.com
+
+Step 12 — Only after everything works, review the Wix billing
+
+Once the GitHub site and email both work, then look at Wix billing.
+
+Keep:
+
+Domain renewal
+Business email / Google Workspace / mailbox subscription
+
+Cancel only the expensive Wix website plan if it is separate.
+
+Do not cancel anything labeled:
+
+Domain
+Mailbox
+Business Email
+Google Workspace
+
+unless he is intentionally moving those services.
+
+Simple checklist version
+
+1. Screenshot all Wix DNS records.
+2. Identify and protect MX/TXT/CNAME/SRV email records.
+3. Upload site to GitHub repo.
+4. Enable GitHub Pages.
+5. Test temporary GitHub Pages URL.
+6. Add www.hisdomain.com in GitHub Pages custom domain.
+7. In Wix DNS, change only @ A records to GitHub Pages IPs.
+8. In Wix DNS, change only www CNAME to username.github.io.
+9. Leave all email records untouched.
+10. Wait for DNS propagation.
+11. Enable Enforce HTTPS in GitHub.
+12. Test website.
+13. Test email inbound and outbound.
+14. Cancel only the Wix website plan, not domain/email.
+
+My opinion: this is the right setup for a basic business site. It avoids the Wix business-plan cost, keeps the email stable, and avoids the extra risk of transferring the domain to GoDaddy before you need to.
+
+ 
+
+ 
+
+Thank you,
+
+Matt Tatham | Director | Configuration Services | eBryIT, Inc.  
+
+Mailing Address:  2155 Barrett Park Dr, Kennesaw GA 30144
+
+mtatham@ebryit.com
+
+Direct 678-385-0612 | Mobile: 770-310-6159
+
+www.ebryit.com | WBE Certified Diversity Supplier
+
+ 
+
+  eBryIT_Logo   WBENC-5   
+
+ 
+
+This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed.  If you have received this email in error please notify the system manager.  This message contains confidential information and is intended only for the individual named.  If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system.  If you are not the intended recipient you are notified that disclosing, copying, distributing or taking any action in reliance on the contents of this information is strictly prohibited.
+
+ 
+
+ 
+
+...
+
+[Message clipped]  View entire message
