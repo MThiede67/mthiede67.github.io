@@ -3,8 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery - Kerry's Fine Painting</title>
+  <title>Project Gallery | Kerry's Fine Painting — Cobb County, GA</title>
+  <meta name="description" content="Browse Kerry's Fine Painting project gallery — interior, exterior, cabinet, and commercial painting projects throughout Cobb County, GA." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mthiede67.github.io/gallery.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Project Gallery | Kerry's Fine Painting — Cobb County, GA" />
+  <meta property="og:description" content="Browse our portfolio of interior, exterior, cabinet, and commercial painting projects in Cobb County, GA." />
+  <meta property="og:url" content="https://mthiede67.github.io/gallery.html" />
+  <meta property="og:image" content="https://mthiede67.github.io/WEBSITE/Great%20Room%20Painting.JPG" />
+  <link rel="icon" type="image/png" href="WEBSITE/Paint%20Bucket%20Logo.png" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your Measurement ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </head>
 <body>
   <header class="site-header">
@@ -18,336 +37,523 @@
         <a href="index.html#services">Services</a>
         <a href="index.html#about">About</a>
         <a href="gallery.html">Gallery</a>
+        <a href="service-areas.html">Service Areas</a>
         <a href="index.html#contact">Contact</a>
+        <a href="tel:4702632400" class="header-phone-link">&#128222; 470-263-2400</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="gallery" class="section gallery-section">
+    <!-- Gallery Hero -->
+    <section class="gallery-hero-section">
       <div class="container">
-        <div class="gallery-header">
-          <div class="section-heading">
-            <p class="eyebrow">Gallery</p>
-            <h2>Our Recent Projects</h2>
-            <p class="subtitle">Explore our portfolio of stunning interior, exterior, and custom painting projects</p>
+        <div class="gallery-hero-content">
+          <p class="eyebrow">Our Portfolio</p>
+          <h1>Project Gallery</h1>
+          <p class="gallery-hero-subtitle">Every room tells a story. Browse our portfolio of transformations — from cozy bedrooms to soaring great rooms, custom cabinets to full commercial spaces.</p>
+          <div class="gallery-stats-bar">
+            <div class="gallery-stat">
+              <span class="gallery-stat-num">500+</span>
+              <span class="gallery-stat-label">Projects Completed</span>
+            </div>
+            <div class="gallery-stat-divider"></div>
+            <div class="gallery-stat">
+              <span class="gallery-stat-num">15+</span>
+              <span class="gallery-stat-label">Years Experience</span>
+            </div>
+            <div class="gallery-stat-divider"></div>
+            <div class="gallery-stat">
+              <span class="gallery-stat-num">5 ★</span>
+              <span class="gallery-stat-label">Average Rating</span>
+            </div>
+            <div class="gallery-stat-divider"></div>
+            <div class="gallery-stat">
+              <span class="gallery-stat-num">100%</span>
+              <span class="gallery-stat-label">Satisfaction Guaranteed</span>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
         <div class="gallery-filters-wrapper">
-          <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="interior">Interior</button>
-            <button class="filter-btn" data-filter="exterior">Exterior</button>
-            <button class="filter-btn" data-filter="cabinets">Cabinets</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
-            <button class="filter-btn" data-filter="before-after">Before & After</button>
+          <div class="gallery-filters" role="tablist" aria-label="Filter gallery by category">
+            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+            <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">Interior</button>
+            <button class="filter-btn" data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
+            <button class="filter-btn" data-filter="cabinets" role="tab" aria-selected="false">Cabinets &amp; Trim</button>
+            <button class="filter-btn" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
           </div>
         </div>
         <div class="gallery-grid" id="galleryGrid">
-          <!-- Interior Painting -->
+
+          <!-- ===== INTERIOR ===== -->
           <figure class="gallery-item featured" data-category="interior">
-            <img src="WEBSITE/Great%20Room%20Painting.JPG" alt="Two-story great room">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Two-Story Great Room</h3>
-            </div>
+            <img src="WEBSITE/Great%20Room%20Painting.JPG" loading="lazy" alt="Great room transformation">
+            <figcaption>Great Room Transformation</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Great Room Transformation</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Foyer%20Interior%20Painting.JPG" alt="Foyer interior painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Foyer Transformation</h3>
-            </div>
+            <img src="WEBSITE/Foyer%20Interior%20Painting.JPG" loading="lazy" alt="Foyer interior painting">
+            <figcaption>Foyer Elegance</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Foyer Elegance</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Master%20bedroom%20painting.JPG" alt="Master bedroom">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Master Bedroom</h3>
-            </div>
+            <img src="WEBSITE/2-story%20great%20room%20painting.JPG" loading="lazy" alt="Two-story great room">
+            <figcaption>Two-Story Great Room</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Two-Story Great Room</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Painting%205.JPG" alt="Interior room painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Living Room Painting</h3>
-            </div>
+            <img src="WEBSITE/2-story%20great%20room%20painting%202.JPG" loading="lazy" alt="Great room detail">
+            <figcaption>Great Room Detail</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Great Room Detail</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/AVYS7383.JPG" alt="Interior bedroom painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Bedroom Refresh</h3>
-            </div>
+            <img src="WEBSITE/Master%20bedroom%20painting.JPG" loading="lazy" alt="Master bedroom painting">
+            <figcaption>Master Bedroom</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Master Bedroom</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/DANI9035.JPG" alt="Foyer painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Entryway Painting</h3>
-            </div>
+            <img src="WEBSITE/Master%20Bedroom%20painting%202.JPG" loading="lazy" alt="Master bedroom suite">
+            <figcaption>Master Bedroom Suite</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Master Bedroom Suite</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/FOSA5109.JPG" alt="Great room painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Great Room Painting</h3>
-            </div>
+            <img src="WEBSITE/Stairway%20painting.JPG" loading="lazy" alt="Stairway painting">
+            <figcaption>Stairway &amp; Railings</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Stairway &amp; Railings</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/2-story%20great%20room%20painting.JPG" alt="Multi-story great room">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Great Room Renovation</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Laundry%20room%20painting.JPG" loading="lazy" alt="Laundry room painting">
+            <figcaption>Laundry Room</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Laundry Room</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/2-story%20great%20room%20painting%202.JPG" alt="Great room finish">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Great Room Detail</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Painting%202.JPG" loading="lazy" alt="Interior living space">
+            <figcaption>Living Space</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Living Space</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Master%20Bedroom%20painting%202.JPG" alt="Master bedroom refresh">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Master Bedroom - After</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Painting%205.JPG" loading="lazy" alt="Living room refresh">
+            <figcaption>Living Room Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Living Room Refresh</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Laundry%20room%20painting.JPG" alt="Laundry room">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Laundry Room Painting</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Painting%206.JPG" loading="lazy" alt="Accent wall painting">
+            <figcaption>Accent Wall</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Accent Wall</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Painting%202.JPG" alt="Interior painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Interior Paint Project</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Painting%207.JPG" loading="lazy" alt="Interior color refresh">
+            <figcaption>Interior Color Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Color Refresh</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Painting%206.JPG" alt="Interior wall painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Wall Painting Project</h3>
-            </div>
+            <img src="WEBSITE/Residential%20Interior%20Painting.JPG" loading="lazy" alt="Residential interior">
+            <figcaption>Residential Interior</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Residential Interior</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Painting%207.JPG" alt="Interior room refresh">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Interior Refresh</h3>
-            </div>
+            <img src="WEBSITE/Residential%20Painting.JPG" loading="lazy" alt="Residential painting">
+            <figcaption>Residential Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Residential Painting</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Residential%20Interior%20Painting.JPG" alt="Residential interior">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Residential Interior</h3>
-            </div>
+            <img src="WEBSITE/Office%20Painting.JPG" loading="lazy" alt="Office space painting">
+            <figcaption>Office Space</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Office Space</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Residential%20Painting.JPG" alt="Residential project">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Residential Painting</h3>
-            </div>
+            <img src="WEBSITE/Office%20Hall%20Painting.JPG" loading="lazy" alt="Office hallway">
+            <figcaption>Office Hallway</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Office Hallway</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Office%20Painting.JPG" alt="Office painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Office Painting</h3>
-            </div>
+            <img src="WEBSITE/Office%20Hall%20Painting%202.JPG" loading="lazy" alt="Commercial corridor">
+            <figcaption>Commercial Corridor</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Commercial Corridor</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Office%20Hall%20Painting.JPG" alt="Office hallway">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Office Hallway</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Prep%20work.JPG" loading="lazy" alt="Interior prep work">
+            <figcaption>Interior Prep Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Prep Work</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Office%20Hall%20Painting%202.JPG" alt="Hallway painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Commercial Hallway</h3>
-            </div>
+            <img src="WEBSITE/Interior%20Patch%20work.JPG" loading="lazy" alt="Patch and repair work">
+            <figcaption>Patch &amp; Repair</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Patch &amp; Repair</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Stairway%20painting.JPG" alt="Stairway painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Stairway Painting</h3>
-            </div>
+            <img src="WEBSITE/Interior%20wall%20repair.JPG" loading="lazy" alt="Wall repair and painting">
+            <figcaption>Wall Repair &amp; Paint</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Wall Repair &amp; Paint</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20cabinet%20preparation.JPG" alt="Cabinet prep work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Cabinet Preparation</h3>
-            </div>
+            <img src="WEBSITE/AVYS7383.JPG" loading="lazy" alt="Bedroom color refresh">
+            <figcaption>Bedroom Color Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Bedroom Color Refresh</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Patch%20work.JPG" alt="Patch work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Patch & Prep Work</h3>
-            </div>
+            <img src="WEBSITE/DANI9035.JPG" loading="lazy" alt="Entryway painting">
+            <figcaption>Entryway Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Entryway Painting</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20Prep%20work.JPG" alt="Interior prep">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Interior Prep Work</h3>
-            </div>
+            <img src="WEBSITE/FOSA5109.JPG" loading="lazy" alt="Open concept living room">
+            <figcaption>Open Concept Living</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Open Concept Living</h3></div>
           </figure>
           <figure class="gallery-item" data-category="interior">
-            <img src="WEBSITE/Interior%20wall%20repair.JPG" alt="Wall repair and paint">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Interior</div>
-              <h3>Wall Repair & Paint</h3>
-            </div>
+            <img src="WEBSITE/HGIG4323.JPG" loading="lazy" alt="Interior painting highlight">
+            <figcaption>Interior Highlight</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Highlight</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/LBOG7171.JPG" loading="lazy" alt="Room transformation">
+            <figcaption>Room Transformation</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Transformation</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/LUNO6123.JPG" loading="lazy" alt="Living space update">
+            <figcaption>Living Space Update</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Living Space Update</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/MANX6954.JPG" loading="lazy" alt="Interior detail work">
+            <figcaption>Interior Detail Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Detail Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/NXTJ1075.JPG" loading="lazy" alt="Fresh interior painting">
+            <figcaption>Fresh Interior</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Fresh Interior</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/SIJV4971.JPG" loading="lazy" alt="Interior refresh">
+            <figcaption>Interior Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Refresh</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/TDSW1134.JPG" loading="lazy" alt="Color consultation result">
+            <figcaption>Color Consultation</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Color Consultation</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/WXAG5117.JPG" loading="lazy" alt="Premium interior painting">
+            <figcaption>Premium Interior</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Premium Interior</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/EPZE7232.JPG" loading="lazy" alt="Feature wall painting">
+            <figcaption>Feature Wall</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Feature Wall</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_6704.JPG" loading="lazy" alt="Interior painting project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_6776.JPG" loading="lazy" alt="Room painting">
+            <figcaption>Room Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7194.JPG" loading="lazy" alt="Interior painting work">
+            <figcaption>Interior Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7228.JPG" loading="lazy" alt="Living area painting">
+            <figcaption>Living Area</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Living Area</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7345.JPG" loading="lazy" alt="Interior project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7346.JPG" loading="lazy" alt="Room refresh">
+            <figcaption>Room Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Refresh</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7347.JPG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7349.JPG" loading="lazy" alt="Interior painting project">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7351.JPG" loading="lazy" alt="Painting project">
+            <figcaption>Painting Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7352.JPG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7353.JPG" loading="lazy" alt="Room painting">
+            <figcaption>Room Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7695.JPG" loading="lazy" alt="Interior project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7696.JPG" loading="lazy" alt="Painting detail">
+            <figcaption>Painting Detail</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Detail</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7977.JPG" loading="lazy" alt="Interior work">
+            <figcaption>Interior Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_7983.JPG" loading="lazy" alt="Room transformation">
+            <figcaption>Room Transformation</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Transformation</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_8218.JPG" loading="lazy" alt="Interior painting project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_8669.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_8672.JPEG" loading="lazy" alt="Painting project">
+            <figcaption>Painting Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_8956.JPEG" loading="lazy" alt="Interior work">
+            <figcaption>Interior Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_8976.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9037.JPEG" loading="lazy" alt="Painting project">
+            <figcaption>Painting Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9038.JPEG" loading="lazy" alt="Interior detail">
+            <figcaption>Interior Detail</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Detail</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9201.JPEG" loading="lazy" alt="Living space painting">
+            <figcaption>Living Space</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Living Space</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9205.JPEG" loading="lazy" alt="Interior painting project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9206.JPEG" loading="lazy" alt="Room painting">
+            <figcaption>Room Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9231.JPG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9355.JPEG" loading="lazy" alt="Interior work">
+            <figcaption>Interior Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9603.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9631.JPG" loading="lazy" alt="Interior project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9636.JPEG" loading="lazy" alt="Room refresh">
+            <figcaption>Room Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Refresh</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9637.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9660.JPEG" loading="lazy" alt="Painting work">
+            <figcaption>Painting Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9706.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9754.JPEG" loading="lazy" alt="Interior work">
+            <figcaption>Interior Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9776.JPEG" loading="lazy" alt="Room painting">
+            <figcaption>Room Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Room Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9833.JPEG" loading="lazy" alt="Interior project">
+            <figcaption>Interior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Project</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9834.JPEG" loading="lazy" alt="Interior painting">
+            <figcaption>Interior Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Interior Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="interior">
+            <img src="WEBSITE/IMG_9835.JPEG" loading="lazy" alt="Painting detail">
+            <figcaption>Painting Detail</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Interior</span><h3>Painting Detail</h3></div>
           </figure>
 
-          <!-- Exterior Painting -->
+          <!-- ===== EXTERIOR ===== -->
           <figure class="gallery-item featured" data-category="exterior">
-            <img src="WEBSITE/AIWT1854.JPG" alt="Exterior back of house">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Exterior</div>
-              <h3>Exterior Back of House</h3>
-            </div>
+            <img src="WEBSITE/AIWT1854.JPG" loading="lazy" alt="Exterior home painting">
+            <figcaption>Exterior Home Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Exterior</span><h3>Exterior Home Painting</h3></div>
           </figure>
           <figure class="gallery-item" data-category="exterior">
-            <img src="WEBSITE/AZAU1693.JPG" alt="Exterior painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Exterior</div>
-              <h3>Exterior Painting Project</h3>
-            </div>
+            <img src="WEBSITE/AZAU1693.JPG" loading="lazy" alt="Exterior painting project">
+            <figcaption>Exterior Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Exterior</span><h3>Exterior Project</h3></div>
           </figure>
           <figure class="gallery-item" data-category="exterior">
-            <img src="WEBSITE/Exterior%20Trim%20Painting.JPG" alt="Exterior trim work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Exterior</div>
-              <h3>Exterior Trim Work</h3>
-            </div>
+            <img src="WEBSITE/Exterior%20Trim%20Painting.JPG" loading="lazy" alt="Exterior trim painting">
+            <figcaption>Exterior Trim &amp; Detail</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Exterior</span><h3>Exterior Trim &amp; Detail</h3></div>
           </figure>
 
-          <!-- Cabinets & Trim -->
+          <!-- ===== CABINETS & TRIM ===== -->
           <figure class="gallery-item featured" data-category="cabinets">
-            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%202.JPG" alt="Kitchen cabinets refresh">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Kitchen Cabinets - Project 2</h3>
-            </div>
+            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%202.JPG" loading="lazy" alt="Kitchen cabinet painting">
+            <figcaption>Kitchen Cabinet Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Kitchen Cabinet Refresh</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/CJMH8801.JPG" alt="Cabinet refresh">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Cabinet Refresh</h3>
-            </div>
+            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%203.JPG" loading="lazy" alt="Custom cabinet painting">
+            <figcaption>Custom Cabinet Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Custom Cabinet Painting</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/CRBW9225.JPG" alt="Trim and detail work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Trim & Detail Work</h3>
-            </div>
+            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%204.JPG" loading="lazy" alt="Cabinet color transformation">
+            <figcaption>Cabinet Color Transform</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Cabinet Color Transform</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/DBUW7508.JPG" alt="Kitchen cabinet painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Kitchen Cabinet Painting</h3>
-            </div>
+            <img src="WEBSITE/CJMH8801.JPG" loading="lazy" alt="Cabinet refresh">
+            <figcaption>Cabinet Refresh</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Cabinet Refresh</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%203.JPG" alt="Kitchen cabinet work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Kitchen Cabinets - Project 3</h3>
-            </div>
+            <img src="WEBSITE/CRBW9225.JPG" loading="lazy" alt="Trim and millwork painting">
+            <figcaption>Trim &amp; Millwork</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Trim &amp; Millwork</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%204.JPG" alt="Custom cabinet painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Custom Cabinet Work</h3>
-            </div>
+            <img src="WEBSITE/DBUW7508.JPG" loading="lazy" alt="Kitchen cabinet painting">
+            <figcaption>Kitchen Cabinets</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Kitchen Cabinets</h3></div>
           </figure>
           <figure class="gallery-item" data-category="cabinets">
-            <img src="WEBSITE/Bookcase%20Painting.JPG" alt="Bookcase painting">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Cabinets</div>
-              <h3>Bookcase Painting</h3>
-            </div>
+            <img src="WEBSITE/Bookcase%20Painting.JPG" loading="lazy" alt="Built-in bookcase painting">
+            <figcaption>Built-in Bookcase</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Built-in Bookcase</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="cabinets">
+            <img src="WEBSITE/Interior%20cabinet%20preparation.JPG" loading="lazy" alt="Cabinet preparation">
+            <figcaption>Cabinet Preparation</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Cabinets &amp; Trim</span><h3>Cabinet Preparation</h3></div>
           </figure>
 
-          <!-- Commercial -->
+          <!-- ===== COMMERCIAL ===== -->
           <figure class="gallery-item featured" data-category="commercial">
-            <img src="WEBSITE/Commercial%20interior%20painting.JPG" alt="Commercial interior">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Commercial</div>
-              <h3>Commercial Interior</h3>
-            </div>
+            <img src="WEBSITE/Commercial%20interior%20painting.JPG" loading="lazy" alt="Commercial interior painting">
+            <figcaption>Commercial Interior</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Commercial Interior</h3></div>
           </figure>
           <figure class="gallery-item" data-category="commercial">
-            <img src="WEBSITE/Commercial%20Painting.JPG" alt="Commercial painting project">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Commercial</div>
-              <h3>Commercial Painting Project</h3>
-            </div>
+            <img src="WEBSITE/Commercial%20Painting.JPG" loading="lazy" alt="Commercial painting project">
+            <figcaption>Commercial Project</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Commercial Project</h3></div>
           </figure>
           <figure class="gallery-item" data-category="commercial">
-            <img src="WEBSITE/Kerrys%20Fine%20Painting%20Commercial%20.JPG" alt="Commercial work">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Commercial</div>
-              <h3>Commercial Work</h3>
-            </div>
+            <img src="WEBSITE/Kerrys%20Fine%20Painting%20Commercial%20.JPG" loading="lazy" alt="Commercial property painting">
+            <figcaption>Commercial Property</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Commercial Property</h3></div>
           </figure>
           <figure class="gallery-item" data-category="commercial">
-            <img src="WEBSITE/KFP%20in%20action.JPG" alt="Team in action">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Commercial</div>
-              <h3>Team in Action</h3>
-            </div>
+            <img src="WEBSITE/KFP%20in%20action.JPG" loading="lazy" alt="Kerry's Fine Painting team at work">
+            <figcaption>Our Team at Work</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Our Team at Work</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="commercial">
+            <img src="WEBSITE/Kerrys%20Fine%20Painting%20.JPG" loading="lazy" alt="Kerry's Fine Painting">
+            <figcaption>Kerry's Fine Painting</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Kerry's Fine Painting</h3></div>
+          </figure>
+          <figure class="gallery-item" data-category="commercial">
+            <img src="WEBSITE/Kerrys%20Fine%20Painting.JPG" loading="lazy" alt="Professional painting services">
+            <figcaption>Professional Services</figcaption>
+            <div class="gallery-overlay"><span class="gallery-badge">Commercial</span><h3>Professional Services</h3></div>
           </figure>
 
-          <!-- Before & After / Customer Images -->
-          <figure class="gallery-item featured" data-category="before-after">
-            <img src="WEBSITE/Interior%20Painting%205.JPG" alt="Before and after interior">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Before & After</div>
-              <h3>Customer Transformation</h3>
-            </div>
-          </figure>
-          <figure class="gallery-item" data-category="before-after">
-            <img src="WEBSITE/Master%20bedroom%20painting.JPG" alt="Bedroom makeover">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Before & After</div>
-              <h3>Bedroom Before & After</h3>
-            </div>
-          </figure>
-          <figure class="gallery-item" data-category="before-after">
-            <img src="WEBSITE/Kitchen%20Cabinet%20Painting%202.JPG" alt="Kitchen refresh">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Before & After</div>
-              <h3>Kitchen Cabinet Transformation</h3>
-            </div>
-          </figure>
-          <figure class="gallery-item" data-category="before-after">
-            <img src="WEBSITE/Foyer%20Interior%20Painting.JPG" alt="Entryway update">
-            <div class="gallery-overlay">
-              <div class="gallery-badge">Before & After</div>
-              <h3>Foyer Makeover</h3>
-            </div>
-          </figure>
+        </div><!-- end gallery-grid -->
+
+        <div class="gallery-load-more" id="galleryLoadMore">
+          <button class="btn-load-more" id="loadMoreBtn">Load More Projects</button>
+          <p class="gallery-count-label" id="galleryCountLabel"></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery CTA -->
+    <section class="gallery-cta-section">
+      <div class="container">
+        <div class="gallery-cta-content">
+          <h2>Ready to Transform Your Space?</h2>
+          <p>Every project in our gallery started with a free estimate. Let's discuss your vision.</p>
+          <div class="gallery-cta-buttons">
+            <a href="index.html#contact" class="cta-btn-primary">Get a Free Estimate</a>
+            <a href="tel:4702632400" class="cta-btn-secondary">Call 470-263-2400</a>
+          </div>
         </div>
       </div>
     </section>
@@ -356,7 +562,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="currentYear"></span> Kerry's Fine Painting. All rights reserved.</p>
-      <p>Serving local homes and businesses with trusted painting services.</p>
+      <p>Serving Cobb County, GA homes and businesses with trusted painting services.</p>
     </div>
   </footer>
 
